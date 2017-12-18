@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/css/bootstrap-material-design.min.css" integrity="sha384-R80DC0KVBO4GSTw+wZ5x2zn2pu4POSErBkf8/fSFhPXHxvHJydT0CSgAP2Yo2r4I" crossorigin="anonymous">
+    <link rel="icon" href="../../../../favicon.ico">
 
-    <title>PostkARte</title>
+    <title>PostkARte Sender</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../../../dist/css/bootstrap-material-design.min.css" rel="stylesheet">
@@ -37,7 +37,14 @@ a:hover {
   background-color: #fff;
   border: .05rem solid #fff;
 }
-
+.btn-outline-secondary,
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
 
 /*
  * Base structure
@@ -165,6 +172,22 @@ body {
     width: 42rem;
   }
 }
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
     </style>
   </head>
 
@@ -180,20 +203,49 @@ body {
             <div class="inner">
               <!--<h3 class="masthead-brand">Cover</h3>-->
               <nav class="nav nav-masthead">
-                <a class="nav-link active" href="#">Home</a>
-                <a class="nav-link" href="sender.html">Send Postcard</a>
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" href="#">Send Postcard</a>
                 <a class="nav-link" href="#">Contact</a>
               </nav>
             </div>
           </div>
 
           <div class="inner cover">
-            <h1 class="cover-heading">PostkARte</h1>
-            <p class="lead">PostkARte is a mobile app that users can attach digital contents like texts, images, videos, audios and geolocations to a postcard. 
-Once your beloved ones receive the postcard, they can browse the surprising contents you prepare for them in AR environment.</p>
-            <p class="lead">
-              <a href="sender.html" class="btn btn-lg btn-secondary" style="color:#fff;">Start</a>
-            </p>
+            <form action="http://35.196.236.27:3000/postcard" method="post" enctype='multipart/form-data'>
+              <div >
+                <div class ="col-sm-8 mx-auto text-center">
+                  <h4 class="text-center"> Postcard: </h4>
+                  <div class="fileUpload btn btn-secondary">
+                    <span style="color:#fff;">Take Photo</span>
+                    <input type="file" accept="image/*" name="postcard" class="upload" />
+                  </div>
+                </div>
+                <div class ="col-sm-8 mx-auto text-center">
+                  <h4 class="text-center"> Images: </h4>
+                  <div class="fileUpload btn btn-secondary">
+                    <span style="color:#fff;">Select</span>
+                    <input type="file" accept="image/*" name="image" multiple="multiple" class="upload" />
+                  </div>
+                </div>
+                <div class ="col-sm-8 mx-auto text-center">
+                  <h4 class="text-center"> Videos: </h4>
+                  <div class="fileUpload btn btn-secondary">
+                    <span style="color:#fff;">Select</span>
+                    <input type="file" accept="image/*" name="image" multiple="multiple" class="upload" />
+                  </div>
+                </div>
+                <div class ="col-sm-8 mx-auto text-center">
+                  <h4 class="text-center"> Message: </h4>
+                  <input type="text" name="text">
+                </div>
+                <br />
+                <br />
+                <br />
+                <div class ="col-sm-8 mx-auto text-center">
+                  <input type="submit" value="Submit" class="btn btn-lg btn-secondary" style="color:#fff;">
+                </div>
+              </div>
+            </form>
           </div>
 
           <div class="mastfoot">

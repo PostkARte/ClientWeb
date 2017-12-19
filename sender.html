@@ -274,24 +274,16 @@ body {
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     
-    <script>
-    function myMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 25.015549, lng: 121.5427091},
-          zoom: 12
-        });
-        var infoWindow = new google.maps.InfoWindow({map: map});
-
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
+  <script type="text/javascript">
+  if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
             var pos = {
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
+            
             document.form1.latitude.value=position.coords.latitude;
             document.form1.longitude.value=position.coords.longitude;
-            map.setCenter(pos);
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
           });
@@ -299,8 +291,7 @@ body {
           // Browser doesn't support Geolocation
           handleLocationError(false, infoWindow, map.getCenter());
         }
-      }
-	</script>
+</script>
 	
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>

@@ -211,7 +211,7 @@ body {
           </div>
 
           <div class="inner cover">
-            <form action="http://35.196.236.27:3000/postcard" method="post" enctype='multipart/form-data'>
+            <form action="http://35.196.236.27:3000/postcard" method="post" enctype='multipart/form-data' name="form1">
               <div >
                 <div class ="col-sm-8 mx-auto text-center">
                   <h4 class="text-center"> Postcard: </h4>
@@ -238,6 +238,10 @@ body {
                   <h4 class="text-center"> Message: </h4>
                   <input type="text" name="text">
                 </div>
+                
+                <input type="hidden" name="latitude" value="">
+                <input type="hidden" name="longitude" value="">
+
                 <br />
                 <br />
                 <br />
@@ -246,7 +250,13 @@ body {
                 </div>
               </div>
             </form>
-          </div>
+            
+        </div>
+        <!--
+        <div class ="col-sm-8 mx-auto text-center">
+        	<div id="map" style="width:315px;height:315px;" class = "col-sm-8 mx-auto"></div>
+    	</div>
+    	-->
 
           <div class="mastfoot">
             <div class="inner">
@@ -263,10 +273,40 @@ body {
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script>
+    function myMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 25.015549, lng: 121.5427091},
+          zoom: 12
+        });
+        var infoWindow = new google.maps.InfoWindow({map: map});
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            document.form1.latitude.value=position.coords.latitude;
+            document.form1.longitude.value=position.coords.longitude;
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+	</script>
+	
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="../../../../assets/js/vendor/popper.min.js"></script>
     <script src="../../../../dist/js/bootstrap-material-design.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>

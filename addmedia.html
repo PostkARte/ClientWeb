@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <title>postkarte</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../dist/css/bootstrap-material-design.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+    <style>
+
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-toggle{
+  color:#FFF;
+}
+.btn-yellow{
+  background-color:#F6E85B;
+  color:#FFF;
+}
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+footer {
+  padding-top: 3rem;
+  padding-bottom: 0rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+.dropdown-menu .active {
+  color: #000;
+  border-bottom-color: #fff;
+  background-color:#D8CC4E;
+}
+.navbar-toggler-icon{
+
+}
+.nav-pills .show > .nav-link {
+  background-color: #D8CC4E !important;
+}
+.navbar-dark .navbar-toggler{
+  border-color:#f8f9fa;
+}
+  </style>
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-dark " style="background-color:#F6E85B;">
+      <div class="container d-flex justify-content-between">
+        <ul class="nav nav-pills">
+          <li class="nav-item dropdown">
+            <a class="navbar-toggler nav-link " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span class="navbar-toggler-icon"></span></a>
+            <div class="dropdown-menu" style="background-color:#F6E85B;">
+              <a class="dropdown-item " href="scanpostcard.html">創建新行程</a>
+              <div role="separator" class="dropdown-divider"></div>
+              <a class="dropdown-item active" href="addmedia.html">旅程進行時</a>
+              <div role="separator" class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">歷史旅程</a>
+              <div role="separator" class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">我的好友</a>
+              <div role="separator" class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">個人資料</a>
+            </div>
+          </li>
+        </ul>
+        <a href="#" class="navbar-brand" style="color:#FFF;">PostkARte</a>
+      </div>
+    </div>
+
+    <div class="col-sm-8 text-center">
+      </br>
+      <form action="" method="post" enctype='multipart/form-data' name="form1">
+        <div class ="col-sm-8 mx-auto text-center">
+                  <h4 class="text-center"> Add photo: </h4>
+                  <div class="fileUpload">
+                    <input type="file" accept="image/*" name="image" multiple="multiple" class="upload" 
+                    button type="button"><img src="add.png" class="img-fluid"></button>
+                  </div>
+        </div>
+        </br>
+        <div class ="col-sm-8 mx-auto text-center">
+                  <h4 class="text-center"> Add video: </h4>
+                  <div class="fileUpload">
+                    <input type="file" accept="video/*" name="video" multiple="multiple" class="upload" 
+                    button type="button"><img src="add.png" class="img-fluid"></button>
+                  </div>
+        </div>
+        </br>
+        <input class ="btn btn-yellow" type="submit" value="Submit" style="color:#fff;" onclick="alert('postcard has been sended')">
+      </form>
+    </div>
+    </br></br></br></br></br></br></br></br></br></br>
+    <footer class="text-muted">
+      <div class="container text-center">
+          <p>2017 NTU MHCI-class Project</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>

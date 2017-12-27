@@ -1,221 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/css/bootstrap-material-design.min.css" integrity="sha384-R80DC0KVBO4GSTw+wZ5x2zn2pu4POSErBkf8/fSFhPXHxvHJydT0CSgAP2Yo2r4I" crossorigin="anonymous">
 
-    <title>PostkARte</title>
+<head>
+  <title>PostkARte ClientWeb</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.yellow-amber.min.css" />
+  <link href="css/style.css" rel="stylesheet">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</head>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../../../../dist/css/bootstrap-material-design.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
-    <style>
-    /*
- * Globals
- */
-
-/* Links */
-a,
-a:focus,
-a:hover {
-  color: #fff;
-}
-
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
-}
-
-
-/*
- * Base structure
- */
-
-html,
-body {
-  height: 100%;
-  background-color: #333;
-}
-body {
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
-}
-
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-.site-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  -webkit-box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
-          box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
-}
-.site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
-}
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
-}
-/* Padding for spacing */
-.inner {
-  padding: 2rem;
-}
-/*
- * Header
- */
-
-.masthead {
-  margin-bottom: 2rem;
-}
-
-.masthead-brand {
-  margin-bottom: 0;
-}
-
-.nav-masthead .nav-link {
-  padding: .25rem 0;
-  font-weight: bold;
-  color: rgba(255,255,255,.5);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
-}
-
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255,255,255,.25);
-}
-
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
-}
-
-.nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
-}
-
-@media (min-width: 48em) {
-  .masthead-brand {
-    float: left;
-  }
-  .nav-masthead {
-    float: right;
-  }
-}
-/*
- * Cover
- */
-.cover {
-  padding: 0 1.5rem;
-}
-.cover .btn-lg {
-  padding: .75rem 1.25rem;
-  font-weight: bold;
-}
-/*
- * Footer
- */
-.mastfoot {
-  color: rgba(255,255,255,.5);
-}
-/*
- * Affix and center
- */
-@media (min-width: 40em) {
-  /* Pull out the header and footer */
-  .masthead {
-    position: fixed;
-    top: 0;
-  }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
-  /* Start the vertical centering */
-  .site-wrapper-inner {
-    vertical-align: middle;
-  }
-  /* Handle the widths */
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
-  }
-}
-
-@media (min-width: 62em) {
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 42rem;
-  }
-}
-    </style>
-  </head>
-
-  <body>
-
-    <div class="site-wrapper">
-
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-              <!--<h3 class="masthead-brand">Cover</h3>-->
-              <nav class="nav nav-masthead">
-                <a class="nav-link active" href="#">Home</a>
-                <a class="nav-link" href="sender.html">Send Postcard</a>
-                <a class="nav-link" href="#">Contact</a>
-              </nav>
-            </div>
-          </div>
-
-          <div class="inner cover">
-            <h1 class="cover-heading">PostkARte</h1>
-            <p class="lead">PostkARte is a mobile app that users can attach digital contents like texts, images, videos, audios and geolocations to a postcard. 
-Once your beloved ones receive the postcard, they can browse the surprising contents you prepare for them in AR environment.</p>
-            <p class="lead">
-              <a href="sender.html" class="btn btn-lg btn-secondary" style="color:#fff;">Start</a>
-            </p>
-          </div>
-
-          <div class="mastfoot">
-            <div class="inner">
-              <p>2017 NTU MHCI-class Project</p>
-            </div>
-          </div>
-
-        </div>
-
+<body>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">PostkARte</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <!-- <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+        </nav> -->
       </div>
-
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Menu</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="#sender-panel">Create a New Journey</a>
+        <a class="mdl-navigation__link" href="#receiver-panel">Scan The Postcard</a>
+        <a class="mdl-navigation__link" href="#history-panel">My History</a>
+      </nav>
     </div>
+    <main class="mdl-layout__content">
+      <form class="page-content" action="http://35.196.236.27:3000/postcard" method="post" enctype="multipart/form-data">
+        <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+          <div class="is-hidden mdl-tabs__tab-bar">
+            <a href="#sender-panel" class="mdl-tabs__tab is-active">Sender</a>
+            <a href="#asset-panel" class="mdl-tabs__tab">Assets</a>
+            <a href="#receiver-panel" class="mdl-tabs__tab">Receiver</a>
+            <a href="#history-panel" class="mdl-tabs__tab">History</a>
+          </div>
+          <div class="mdl-tabs__panel is-active" id="sender-panel">
+            <div class="mdl-grid">
+              <div class="mdl-cell">
+                <h5>Take a photo from your postcard</h5>
+                <img class="postcard-preview-0 full-width" src="asset/scan-postcard.png">
+              </div>
+            </div>
+            <div class="mdl-grid">
+              <div class="mdl-cell">
+                <input class="is-hidden" type="file" accept="image/*" name="postcard">
+                <div class="text-center">
+                  <button type="button" data-name="postcard" class="file-image mdl-button mdl-button--colored mdl-button--raised mdl-js-button mdl-js-ripple-effect">
+                    Take a photo
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="mdl-grid">
+              <div class="mdl-cell text-center">
+                <button type="button" id="sender-next" class="is-hidden mdl-button mdl-button--colored mdl-button--raised mdl-js-button mdl-js-ripple-effect">
+                  Choose more photos
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="mdl-tabs__panel" id="asset-panel">
+            <div class="mdl-grid">
+              <div class="mdl-cell">
+                <h6>Choose photo(s)</h6>
+                <input class="is-hidden" type="file" accept="image/*" multiple="multiple" name="image">
+                <div class="text-center">
+                  <img data-name="image" class="file-image full-width" src="asset/add.png">
+                </div>
+              </div>
+            </div>
+            <div class="mdl-grid">
+              <div class="mdl-cell">
+                <h6>Choose video(s)</h6>
+                <input class="is-hidden" type="file" accept="video/*" multiple="multiple" name="video">
+                <div class="text-center">
+                  <img data-name="video" class="file-image full-width" src="asset/add.png">
+                </div>
+              </div>
+            </div>
+            <div class="mdl-grid">
+              <div class="mdl-cell">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" name="text">
+                  <label class="mdl-textfield__label" for="sample3">Message</label>
+                </div>
+              </div>
+            </div>
+            <div class="mdl-grid">
+              <div class="mdl-cell text-center">
+                <button type="submit" class="mdl-button mdl-button--colored mdl-button--raised mdl-js-button mdl-js-ripple-effect">
+                  Upload
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="mdl-tabs__panel" id="receiver-panel">
+            <div class="mdl-grid">
+              <div class="mdl-cell">
+                <h5>Please download the App.</h5>
+              </div>
+            </div>
+          </div>
+          <div class="mdl-tabs__panel" id="history-panel">
+            <div class="mdl-grid">
+              <div class="mdl-cell">
+                <h5>Please download the App.</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+  </div>
+  <script src="js/main.js"></script>
+</body>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../../../dist/js/bootstrap-material-design.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
 </html>

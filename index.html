@@ -37,7 +37,7 @@
       </nav>
     </div>
     <main class="mdl-layout__content">
-      <form class="page-content" action="http://35.196.236.27:3000/postcard" method="post" enctype="multipart/form-data">
+      <form name="myForm" class="page-content" action="http://35.196.236.27:3000/postcard" method="post" enctype="multipart/form-data">
         <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
           <div class="is-hidden mdl-tabs__tab-bar">
             <a href="#sender-panel" class="mdl-tabs__tab is-active">Sender</a>
@@ -54,6 +54,8 @@
             </div>
             <div class="mdl-grid">
               <div class="mdl-cell">
+                <input class="is-hidden" type="text" name="latitude">
+                <input class="is-hidden" type="text" name="longitude">
                 <input class="is-hidden" type="file" accept="image/*" name="postcard">
                 <div class="text-center">
                   <button type="button" data-name="postcard" class="file-image mdl-button mdl-button--colored mdl-button--raised mdl-js-button mdl-js-ripple-effect">

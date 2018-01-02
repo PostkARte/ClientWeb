@@ -2,6 +2,18 @@
   const $inputPostcard = document.querySelector('#sender-file-postcard')
   const $btnSenderNext = document.querySelector('#sender-next')
 
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      document.myForm.latitude.value = position.coords.latitude;
+      document.myForm.longitude.value = position.coords.longitude;
+    }, function() {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
+  }
+
   document.querySelectorAll('.mdl-navigation__link').forEach($link => {
     $link.addEventListener('click', function() {
       const href = this.getAttribute('href');
